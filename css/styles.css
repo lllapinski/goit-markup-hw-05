@@ -484,7 +484,9 @@ img {
   border-radius: 4px;
   padding: 12px 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
@@ -569,8 +571,6 @@ img {
   position: absolute;
   top: 0;
 
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -579,7 +579,8 @@ img {
 
   background-color: var(--add-color);
   height: 100%;
-  padding: 40px 32px 164px;
+  width: 100%;
+  padding: 40px 32px 0px;
   transform: translateY(100%);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -622,7 +623,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #afb1b8;
+  fill: #8e8f99;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .costummers-items {
@@ -636,8 +637,10 @@ img {
 .backdrop {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  opacity: 1;
   background-color: rgba(48, 48, 48, 0.565);
   transition: opacity 250ms linear, visibility 250ms linear;
 }
@@ -645,24 +648,27 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) rotate(0deg) scaleY(0);
 }
-
+button {
+  padding: 0px;
+}
 .modal {
   width: 408px;
-  min-height: 576px;
+  min-height: 584px;
   background-color: #ffffff;
   border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(360deg) scaleY(1);
-  padding: 30px;
+
   transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
+  border-radius: 50%;
   padding: 8px;
-  border-radius: 50px;
-  display: block;
-  margin-left: auto;
+  top: 0;
+  right: 0;
+  position: absolute;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(231, 233, 252, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -676,21 +682,17 @@ img {
   fill: #fff;
 }
 
-.close-svg-link {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+.close {
+  transition: background-color 250ms;
+  fill: #2e2f42;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.close {
-  transition: background-color 250ms;
-  fill: #2e2f42;
+.current {
+  color: #404bbf;
 }
-
 .current::before {
   content: '';
   width: 100%;
