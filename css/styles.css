@@ -4,6 +4,8 @@
   --link-color: #434455;
   --hover-color: #404bbf;
   --white-color: #f4f4fd;
+  --grey-white-color: #8e8f99;
+  --border-color: #e7e9fc;
 }
 
 body {
@@ -73,7 +75,7 @@ img {
   /* border: solid 2px coral; */
 }
 .head-container {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -295,7 +297,7 @@ img {
 }
 
 .tasks-img {
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--border-color);
 }
 
 /*  SECTION FOUR*/
@@ -480,7 +482,7 @@ img {
   letter-spacing: 0.04em;
   cursor: pointer;
   color: var(--add-color);
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   padding: 12px 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -536,9 +538,9 @@ img {
   padding-left: 16px;
   background: #ffffff;
 
-  border-bottom: 1px solid #e7e9fc;
-  border-left: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
 
 .lnk-img {
@@ -617,13 +619,13 @@ img {
 .link {
 }
 .customers-link-tag {
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--grey-white-color);
   border-radius: 4px;
   height: 88px;
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #8e8f99;
+  fill: var(--grey-white-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .costummers-items {
@@ -684,14 +686,14 @@ button {
 
 .close {
   transition: background-color 250ms;
-  fill: #2e2f42;
+  fill: var(--main-color);
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .current {
-  color: #404bbf;
+  color: var(--hover-color);
 }
 .current::before {
   content: '';
@@ -701,7 +703,7 @@ button {
   height: 4px;
   left: 0;
   top: 44px;
-  background-color: #404bbf;
+  background-color: var(--hover-color);
   border-radius: 2px;
 }
 .is-hidden {
